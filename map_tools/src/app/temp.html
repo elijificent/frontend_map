@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hex-Like Grid</title>
+  <style>
+    .hex-grid {
+      display: flex;
+      flex-wrap: wrap;
+      width: 400px; /* Adjust the container width as needed */
+      margin: 0 auto;
+    }
+
+    .hex-cell {
+      width: 100px; /* Adjust the cell size as needed */
+      height: 115px; /* Adjust the cell size as needed */
+      background-color: #3498db;
+      margin: -57.5px 0; /* Half of the height */
+      transform: rotate(30deg);
+    }
+
+    .hex-cell:nth-child(even) {
+      margin-top: 57.5px; /* Restore the margin for even columns */
+    }
+  </style>
+</head>
+<body>
+  <div class="hex-grid">
+    <div class="hex-cell"></div>
+    <div class="hex-cell"></div>
+    <div class="hex-cell"></div>
+    <div class="hex-cell"></div>
+    <div class="hex-cell"></div>
+    <div class="hex-cell"></div>
+    <div class="hex-cell"></div>
+    <div class="hex-cell"></div>
+    <div class="hex-cell"></div>
+  </div>
+</body>
+</html>

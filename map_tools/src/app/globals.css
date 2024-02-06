@@ -2,32 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.tile-quantum {
+  background-color: purple;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.tile-ocean {
+  background-color: blue;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.tile-forest {
+  background-color: green;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.tile-stone {
+  background-color: gray;
+}
+
+.tile-sand {
+  background-color: yellow;
+}
+
+.tile-grass {
+  background-color: lightgreen;
+}
+
+.tile {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tile-selected {
+  border: 2px solid red;
+}
+
+.tile-hovered {
+  border: 2px solid blue;
+}
+
+.tile-hover-neighbors {
+  border: 2px solid green;
+}
+
+.map-col:nth-child(even) {
+  margin-top: 25px;
 }
